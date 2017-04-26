@@ -457,3 +457,68 @@ Contains:
 	desc = "This suit has already been used. It's useless."
 	icon = 'icons/obj/clothing/suits.dmi'
 	icon_state = "empressure_suit"
+
+//----------------
+
+/obj/item/clothing/suit/space/hardsuit/ert/viridian
+	name = "viridian hardsuit"
+	icon_state = "hardsuit-viridian"
+	item_state = "hardsuit-viridian"
+	desc = "An ornamental hardsuit designed for lizards. It can be switched between a spaceworthy closed and a stylish open orientation."
+	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/ert/viridian
+	var/adjusted = NORMAL_STYLE
+
+/obj/item/clothing/head/helmet/space/hardsuit/ert/viridian
+	name = "viridian helmet"
+	icon_state = "hardsuit-viridian0"
+	item_state = "hardsuit-viridian0"
+	desc = "The helmet of an ornamental hardsuit."
+	actions_types = list()
+
+/obj/item/clothing/suit/space/hardsuit/ert/viridian/AltClick(mob/user)
+	..()
+	if(!user.canUseTopic(src, be_close=TRUE))
+		user << "<span class='warning'>You can't do that right now!</span>"
+		return
+	else
+		rolldown()
+
+/obj/item/clothing/suit/space/hardsuit/ert/viridian/verb/jumpsuit_adjust()
+	set name = "Adjust Hardsuit Style"
+	set category = null
+	set src in usr
+	rolldown()
+
+/obj/item/clothing/suit/space/hardsuit/ert/viridian/proc/rolldown()
+	if(!can_use(usr))
+		return
+	if(toggle_jumpsuit_adjust())
+		usr << "<span class='notice'>You adjust the suit to be more open; it is no longer spaceworthy.</span>"
+	else
+		usr << "<span class='notice'>You adjust the suit back to its original orientation. It is now spaceworthy.</span>"
+	if(ishuman(usr))
+		var/mob/living/carbon/human/H = usr
+		H.update_inv_wear_suit()
+		H.update_body()
+
+/obj/item/clothing/suit/space/hardsuit/ert/viridian/proc/toggle_jumpsuit_adjust()
+	adjusted = !adjusted
+	if(adjusted)
+		body_parts_covered &= ~GROIN
+		body_parts_covered &= ~LEGS
+		body_parts_covered &= ~FEET
+		flags_inv &= ~HIDESHOES
+		flags_inv &= ~HIDEJUMPSUIT
+		flags &= ~STOPSPRESSUREDMAGE
+		flags &= ~THICKMATERIAL
+		icon_state = "hardsuit-viridian_d"
+	else
+		body_parts_covered |= GROIN
+		body_parts_covered |= LEGS
+		body_parts_covered |= FEET
+		flags_inv |= HIDESHOES
+		flags_inv |= HIDEJUMPSUIT
+		flags |= STOPSPRESSUREDMAGE
+		flags |= THICKMATERIAL
+		icon_state = "hardsuit-viridian"
+	return adjusted
