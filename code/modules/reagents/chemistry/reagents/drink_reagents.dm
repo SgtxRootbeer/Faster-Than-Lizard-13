@@ -493,7 +493,7 @@
 	color = "#E6CDFF"
 
 /datum/reagent/consumable/berry_frappe
-	name = "Berry frappe"
+	name = "berry frappe"
 	id = "berry_frappe"
 	description = "A healthy and tastey mix of yogurt and berries."
 	color = "#863333"

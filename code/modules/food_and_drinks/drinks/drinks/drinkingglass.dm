@@ -517,7 +517,7 @@
 				desc = "Tastes like autumn."
 			if("berry_frappe")
 				icon_state = "berry_frappe"
-				name = "Berry frappe"
+				name = "berry frappe"
 				desc = "A healthy and tastey mix of yogurt and berries."
 			else
 				icon_state ="glass_brown"
