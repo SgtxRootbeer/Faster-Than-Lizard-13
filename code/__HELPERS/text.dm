@@ -44,6 +44,20 @@
 			t = copytext(t, 1, index) + repl_chars[char] + copytext(t, index+1)
 			index = findtext(t, char, index+1)
 	return t
+
+
+//Copypasted code above except it doesnt check for the russian letter. For vendors only.
+/proc/sanitize_simple_ven(t,list/repl_chars = list("\n"="#","\t"="#"))
+	for(var/char in repl_chars)
+		var/index = findtext(t, char)
+		while(index)
+			t = copytext(t, 1, index) + repl_chars[char] + copytext(t, index+1)
+			index = findtext(t, char, index+1)
+	return t
+/proc/sanitize_ven(t,list/repl_chars = null)
+	return html_encode(sanitize_simple_ven(t,repl_chars))
+
+
 //Runs byond's sanitization proc along-side sanitize_simple
 /proc/sanitize(t,list/repl_chars = null)
 	return html_encode(sanitize_simple(t,repl_chars))
