@@ -515,6 +515,10 @@
 				icon_state = "whiskeyglass"
 				name = "Hard Cider"
 				desc = "Tastes like autumn."
+			if("berry_frappe")
+				icon_state = "berry_frappe"
+				name = "Berry frappe"
+				desc = "A healthy and tastey mix of yogurt and berries."
 			else
 				icon_state ="glass_brown"
 				var/image/I = image(icon, "glassoverlay")
