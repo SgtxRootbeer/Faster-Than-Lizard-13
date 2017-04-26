@@ -7,8 +7,10 @@
 # NOTE: if the rank-name cannot be found in admin_ranks.txt, they will not be adminned! ~Carn #
 # NOTE: syntax was changed to allow hyphenation of ranknames, since spaces are stripped.      #
 ###############################################################################################
-pascal123 = Server Host
+pascal123 = Scapegoat
+francinum = Server Host
 eviljackcarver = Game Master
+Jerry Derpington = Eventmin
 eissendargwell = Game Admin
 segalowitz = Game Admin
 leon962 = Game Admin
@@ -16,3 +18,4 @@ jessica_stark = Game Admin
 christ110 = Game Admin
 auris456852 = Game Admin
 thunderov = Trial Admin
+LuluLemonade = Game Admin
