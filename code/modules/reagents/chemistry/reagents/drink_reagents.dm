@@ -492,6 +492,12 @@
 	description = "Beloved of children and teetotalers."
 	color = "#E6CDFF"
 
+/datum/reagent/consumable/berry_frappe
+	name = "berry frappe"
+	id = "berry_frappe"
+	description = "A healthy and tastey mix of yogurt and berries."
+	color = "#863333"
+
 //////////////////////////////////////////////The ten friggen million reagents that get you drunk//////////////////////////////////////////////
 
 /datum/reagent/consumable/atomicbomb

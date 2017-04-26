@@ -459,24 +459,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/shuttle/ftl/cargo/mining)
-"aCV" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/station{
-	dir = 2
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 25;
-	pixel_y = 0
-	},
-/turf/open/floor/wood,
-/area/shuttle/ftl/crew_quarters/locker)
 "aLZ" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible,
 /obj/effect/decal/cleanable/dirt,
@@ -556,6 +538,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/black,
 /area/shuttle/ftl/bridge/eva)
+"baD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/wardrobe/atmospherics_yellow,
+/turf/open/floor/plasteel/darkblue,
+/area/shuttle/ftl/atmos)
 "bcD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -949,30 +936,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/darkblue,
 /area/shuttle/ftl/bridge/eva)
-"bSL" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 2
-	},
-/obj/structure/closet/secure_closet/personal{
-	anchored = 1;
-	desc = "It's a secure locker for personnel.";
-	name = "Francis Gallyus's closet";
-	registered_name = "Francis Gallyus"
-	},
-/obj/item/clockwork/slab,
-/obj/item/clothing/suit/space/hardsuit/ert/paranormal/inquisitor/brass{
-	armor = list(melee = 30, bullet = 15, laser = 30, energy = 10, bomb = 10, bio = 100, rad = 50)
-	},
-/obj/machinery/newscaster{
-	pixel_y = 28
-	},
-/turf/open/floor/wood,
-/area/shuttle/ftl/crew_quarters/locker)
 "bSM" = (
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/storage/tech)
@@ -3086,15 +3049,6 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/shuttle/ftl/crew_quarters/kitchen)
-"fFd" = (
-/obj/machinery/atmospherics/pipe/simple/supply/visible,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 24
-	},
-/turf/open/floor/plasteel/black,
-/area/shuttle/ftl/atmos)
 "fIA" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -3749,10 +3703,6 @@
 	},
 /turf/open/floor/plasteel/black,
 /area/shuttle/ftl/engine/engineering)
-"gOq" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/darkblue,
-/area/shuttle/ftl/atmos)
 "gPt" = (
 /obj/structure/spacepoddoor{
 	dir = 8
@@ -4631,21 +4581,6 @@
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
 /area/shuttle/ftl/maintenance/medbay)
-"iqS" = (
-/obj/structure/cable{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc/priority{
-	auto_name = 1;
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/wardrobe/atmospherics_yellow,
-/turf/open/floor/plasteel/black,
-/area/shuttle/ftl/atmos)
 "isB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/firealarm{
@@ -4966,6 +4901,20 @@
 	},
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/bridge/meeting_room)
+"jhd" = (
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/priority{
+	auto_name = 1;
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/black,
+/area/shuttle/ftl/atmos)
 "jhy" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -8931,6 +8880,25 @@
 	},
 /turf/open/floor/plasteel,
 /area/shuttle/ftl/cargo/office)
+"qFL" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/station{
+	dir = 2
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 25;
+	pixel_y = 0
+	},
+/obj/structure/dresser,
+/turf/open/floor/wood,
+/area/shuttle/ftl/crew_quarters/locker)
 "qIT" = (
 /obj/structure/table/glass,
 /obj/item/weapon/grenade/chem_grenade,
@@ -9992,6 +9960,30 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/ftl/hallway/primary/port)
+"soF" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 2
+	},
+/obj/structure/closet/secure_closet/personal{
+	anchored = 1;
+	desc = "It's a secure locker for personnel.";
+	name = "Francis Gallyus's closet";
+	registered_name = "Francis Gallyus"
+	},
+/obj/item/clothing/suit/space/hardsuit/ert/paranormal/inquisitor/brass{
+	armor = list(melee = 30, bullet = 15, laser = 30, energy = 10, bomb = 10, bio = 100, rad = 50)
+	},
+/obj/machinery/newscaster{
+	pixel_y = 28
+	},
+/obj/item/weapon/storage/toolbox/brass,
+/turf/open/floor/wood,
+/area/shuttle/ftl/crew_quarters/locker)
 "sqh" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/station,
 /obj/effect/landmark/start{
@@ -11356,19 +11348,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/shuttle/ftl/medical/chemistry)
-"vke" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/visible{
-	tag = "icon-manifold (EAST)";
-	icon_state = "manifold";
-	dir = 4
-	},
-/obj/machinery/airalarm{
-	dir = 1;
-	pixel_y = -24
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/black,
-/area/shuttle/ftl/atmos)
 "vlR" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -13695,26 +13674,6 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/ftl/engine/engine_smes)
-"zJz" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/closet/secure_closet/personal{
-	anchored = 1;
-	desc = "It's a secure locker for personnel.";
-	moving_diagonally = 0;
-	name = "Eats-The-Glue's closet";
-	registered_name = "Eats-The-Glue"
-	},
-/obj/item/weapon/gun/projectile/automatic/pistol,
-/obj/item/device/radio/intercom{
-	pixel_y = 24
-	},
-/obj/item/ammo_box/magazine/m10mm,
-/turf/open/floor/wood,
-/area/shuttle/ftl/crew_quarters/locker)
 "zLe" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -14294,6 +14253,26 @@
 /obj/effect/decal/cleanable/greenglow,
 /turf/open/floor/plasteel,
 /area/shuttle/ftl/cargo/mining)
+"ACy" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/closet/secure_closet/personal{
+	anchored = 1;
+	desc = "It's a secure locker for personnel.";
+	moving_diagonally = 0;
+	name = "Lily's closet";
+	registered_name = "Lily"
+	},
+/obj/item/device/radio/intercom{
+	pixel_y = 24
+	},
+/obj/item/weapon/gun/energy/floragun,
+/obj/item/weapon/gun/energy/plasmacutter/adv,
+/turf/open/floor/wood,
+/area/shuttle/ftl/crew_quarters/locker)
 "ADk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -19662,6 +19641,16 @@
 	dir = 5
 	},
 /area/shuttle/ftl/security/nuke_storage)
+"Kny" = (
+/obj/machinery/atmospherics/pipe/simple/supply/visible,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/open/floor/plasteel/black,
+/area/shuttle/ftl/atmos)
 "KnJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -25113,6 +25102,20 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/ftl/maintenance/disposal)
+"UoI" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/visible{
+	tag = "icon-manifold (EAST)";
+	icon_state = "manifold";
+	dir = 4
+	},
+/obj/machinery/airalarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/portable_atmospherics/pump,
+/turf/open/floor/plasteel/black,
+/area/shuttle/ftl/atmos)
 "UoT" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -37816,7 +37819,7 @@ sbe
 Itx
 Cbf
 Utw
-gOq
+baD
 rPy
 SdX
 Nmx
@@ -40635,15 +40638,15 @@ sKA
 PbP
 mDa
 rPy
-iqS
+jhd
 pNO
 psx
 YUf
 Ysm
 xte
 dbZ
-fFd
-vke
+Kny
+UoI
 ajU
 SCC
 QBw
@@ -62979,7 +62982,7 @@ Dft
 iOf
 OFv
 WbU
-bSL
+soF
 hDM
 cjX
 jzE
@@ -63493,7 +63496,7 @@ Dft
 Nry
 zGB
 Etg
-zJz
+ACy
 alv
 BBn
 Lav
@@ -63750,7 +63753,7 @@ Dft
 BIM
 rkv
 Etg
-aCV
+qFL
 hDM
 RmU
 Lav
