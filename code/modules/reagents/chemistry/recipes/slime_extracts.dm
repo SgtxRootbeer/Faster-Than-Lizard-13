@@ -69,7 +69,7 @@
 /datum/chemical_reaction/slime/slimemutate_unstable
 	name = "Unstable Mutation Toxin"
 	id = "unstablemutationtoxin"
-	 = "unstablemutationtoxin"
+	Result = "unstablemutationtoxin"
 	required_reagents = list("radium" = 1)
 	result_amount = 1
 	required_other = 1
