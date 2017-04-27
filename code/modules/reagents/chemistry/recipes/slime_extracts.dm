@@ -55,7 +55,7 @@
 /datum/chemical_reaction/slime/slimemutate
 	name = "Mutation Toxin"
 	id = "mutationtoxin"
-	Result = "mutationtoxin"
+	result = "mutationtoxin"
 	required_reagents = list("plasma" = 1)
 	result_amount = 1
 	required_other = 1
