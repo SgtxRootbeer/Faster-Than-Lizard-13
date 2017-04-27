@@ -371,7 +371,7 @@
 					dat += "<a href='byond://?src=\ref[src];vend=\ref[R]'>Vend</a> "
 				else
 					dat += "<span class='linkOff'>Sold out</span> "
-				dat += "<font color = '[R.display_color]'><b>[sanitize(R.product_name)]</b>:</font>"
+				dat += "<font color = '[R.display_color]'><b>[sanitize_ven(R.product_name)]</b>:</font>"
 				dat += " <b>[R.amount]</b>"
 				dat += "</li>"
 			dat += "</ul>"
