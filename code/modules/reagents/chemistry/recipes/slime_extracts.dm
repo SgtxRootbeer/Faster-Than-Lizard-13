@@ -27,8 +27,9 @@
 /datum/chemical_reaction/slime/slimeinaprov
 	name = "Slime epinephrine"
 	id = "m_inaprov"
-	results = list("epinephrine" = 3)
+	result = "epinephrine"
 	required_reagents = list("water" = 5)
+	result_amount = 3
 	required_other = 1
 	required_container = /obj/item/slime_extract/grey
 
@@ -54,8 +55,9 @@
 /datum/chemical_reaction/slime/slimemutate
 	name = "Mutation Toxin"
 	id = "mutationtoxin"
-	results = list("mutationtoxin" = 1)
+	Result = "mutationtoxin"
 	required_reagents = list("plasma" = 1)
+	result_amount = 1
 	required_other = 1
 	required_container = /obj/item/slime_extract/green
 
@@ -67,8 +69,9 @@
 /datum/chemical_reaction/slime/slimemutate_unstable
 	name = "Unstable Mutation Toxin"
 	id = "unstablemutationtoxin"
-	results = list("unstablemutationtoxin" = 1)
+	results = "unstablemutationtoxin"
 	required_reagents = list("radium" = 1)
+	result_amount = 1
 	required_other = 1
 	required_container = /obj/item/slime_extract/green
 	mix_message = "<span class='info'>The mixture rapidly expands and contracts, its appearance shifting into a sickening green.</span>"
@@ -234,9 +237,10 @@
 /datum/chemical_reaction/slime/slimefrost
 	name = "Slime Frost Oil"
 	id = "m_frostoil"
-	results = list("frostoil" = 10)
+	result = "frostoil"
 	required_reagents = list("plasma" = 1)
 	required_container = /obj/item/slime_extract/blue
+	result_amount = 10
 	required_other = 1
 
 /datum/chemical_reaction/slime/slimefrost/on_reaction(datum/reagents/holder)
@@ -255,19 +259,6 @@
 	feedback_add_details("slime_cores_used","[type]")
 	var/obj/item/slimepotion/stabilizer/P = new /obj/item/slimepotion/stabilizer
 	P.loc = get_turf(holder.my_atom)
-	..()
-
-
-/datum/chemical_reaction/slime/slimefoam
-	name = "Slime Foam"
-	id = "m_foam"
-	results = list("fluorosurfactant" = 20, "water" = 20)
-	required_reagents = list("water" = 5)
-	required_container = /obj/item/slime_extract/blue
-	required_other = 1
-
-/datum/chemical_reaction/slime/slimefoam/on_reaction(datum/reagents/holder)
-	feedback_add_details("slime_cores_used","[type]")
 	..()
 
 
@@ -312,9 +303,10 @@
 /datum/chemical_reaction/slime/slimecasp
 	name = "Slime Capsaicin Oil"
 	id = "m_capsaicinoil"
-	results = list("capsaicin" = 10)
+	result = "capsaicin"
 	required_reagents = list("blood" = 1)
 	required_container = /obj/item/slime_extract/orange
+	result_amount = 10
 	required_other = 1
 
 /datum/chemical_reaction/slime/slimecasp/on_reaction(datum/reagents/holder)
@@ -342,18 +334,6 @@
 		if(istype(T))
 			T.atmos_spawn_air("plasma=50;TEMP=1000")
 
-
-/datum/chemical_reaction/slime/slimesmoke
-	name = "Slime Smoke"
-	id = "m_smoke"
-	results = list("phosphorus" = 10, "potassium" = 10, "sugar" = 10)
-	required_reagents = list("water" = 5)
-	required_container = /obj/item/slime_extract/orange
-	required_other = 1
-
-/datum/chemical_reaction/slime/slimesmoke/on_reaction(datum/reagents/holder)
-	feedback_add_details("slime_cores_used","[type]")
-	..()
 
 //Yellow
 
@@ -416,9 +396,10 @@
 /datum/chemical_reaction/slime/slimejam
 	name = "Slime Jam"
 	id = "m_jam"
-	results = list("slimejelly" = 10)
+	result = "slimejelly"
 	required_reagents = list("sugar" = 1)
 	required_container = /obj/item/slime_extract/purple
+	result_amount = 10
 	required_other = 1
 
 /datum/chemical_reaction/slime/slimejam/on_reaction(datum/reagents/holder)
@@ -502,8 +483,9 @@
 /datum/chemical_reaction/slime/slimemutate2
 	name = "Advanced Mutation Toxin"
 	id = "mutationtoxin2"
-	results = list("amutationtoxin" = 1)
+	result = "amutationtoxin"
 	required_reagents = list("plasma" = 1)
+	result_amount = 1
 	required_other = 1
 	required_container = /obj/item/slime_extract/black
 
@@ -542,9 +524,10 @@
 /datum/chemical_reaction/slime/slimecornoil
 	name = "Slime Corn Oil"
 	id = "m_cornoil"
-	results = list("cornoil" = 10)
+	result = "cornoil"
 	required_reagents = list("blood" = 1)
 	required_container = /obj/item/slime_extract/oil
+	result_amount = 10
 	required_other = 1
 
 /datum/chemical_reaction/slime/slimecornoil/on_reaction(datum/reagents/holder)
