@@ -621,3 +621,12 @@
 	required_reagents = list("tea" = 1, "lemonjuice" = 1)
 	result_amount = 2
 	mix_message = "The smells of fresh green grass and sand traps waft through the air as the mixture turns a friendly yellow-orange."
+
+/datum/chemical_reaction/frappe
+	name = "berry frappe"
+	id = "berry_frappe"
+	result = "berry_frappe"
+	required_reagents = list ("milk" = 1, "berryjuice" = 1)
+	required_catalysts = list ("enzyme" = 5)
+	result_amount = 2
+	mix_message = "The mixture thickens into a creamy yogurt."

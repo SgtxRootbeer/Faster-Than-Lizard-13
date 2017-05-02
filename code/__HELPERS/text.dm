@@ -37,17 +37,28 @@
 	return t
 
 //Removes a few problematic characters
-/proc/sanitize_simple(t,list/repl_chars = list("\n"="#","\t"="#"))
+/proc/sanitize_simple(t,list/repl_chars = list("\n"="#","\t"="#","ÿ"="ß"))
 	for(var/char in repl_chars)
 		var/index = findtext(t, char)
 		while(index)
 			t = copytext(t, 1, index) + repl_chars[char] + copytext(t, index+1)
 			index = findtext(t, char, index+1)
 	return t
-
+	
 //Runs byond's sanitization proc along-side sanitize_simple
 /proc/sanitize(t,list/repl_chars = null)
 	return html_encode(sanitize_simple(t,repl_chars))
+
+//Copypasted text from above except this one does not check for the russian letter
+/proc/sanitize_simple_ven(t,list/repl_chars = list("\n"="#","\t"="#"))
+	for(var/char in repl_chars)
+		var/index = findtext(t, char)
+		while(index)
+			t = copytext(t, 1, index) + repl_chars[char] + copytext(t, index+1)
+			index = findtext(t, char, index+1)
+	return t
+/proc/sanitize_ven(t,list/repl_chars = null)
+	return html_encode(sanitize_simple_ven(t,repl_chars))
 
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()
@@ -70,7 +81,7 @@
 			if(62,60,92,47)
 				return			//rejects the text if it contains these bad characters: <, >, \ or /
 			if(127 to 255)
-				return			//rejects weird letters like �
+				return			//rejects weird letters like ï¿½
 			if(0 to 31)
 				return			//more weird stuff
 			if(32)
